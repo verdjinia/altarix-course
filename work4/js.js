@@ -1,6 +1,6 @@
 window.onload = function () {
     var btn = document.getElementById('search-btn');
-	btn.onclick = function findNickname() {
+	btn.onclick = function loginSearch() {
 		var vallog = document.getElementById("search").value;
 		var result = document.getElementById("result");
 		fetch('https://api.github.com/search/users?q=' + vallog)
