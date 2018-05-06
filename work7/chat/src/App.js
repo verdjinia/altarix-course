@@ -9,20 +9,25 @@ class App extends Component {
 	super(props)
 	this.state = {
 	  messages: [
-	  	{ author: "Я", message: "=)", me:true },
 		{ author: "Петр Петров", message: "Привет!" },
 		{ author: "Петр Петров", message: "Как дела с JavaScript?" },
+		{ author: "Я", message: "=)", me: true },
 	  ],
 		}
 	} 
+	NewMessage = (text) => {
+		this.setState({
+		  messages: [...this.state.messages, { author: "Me", me: true, message: text }],
+		})
+	}
 	render() {
-	return (
-	  <div className="App">
-		<Header />
-		<MessageList messages={this.state.messages} />
-		<MessageForm />
-	  </div>
-	);
+		return (
+		  <div className="App">
+			<Header />
+			<MessageList messages={this.state.messages} />
+			<MessageForm onMessageSend={this.NewMessage} />
+		  </div>
+		);
 	}
 }
 

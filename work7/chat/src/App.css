@@ -20,7 +20,7 @@
 .App .MessageList {
 	flex: 1;
 	display: flex;
-	flex-flow: column-reverse;
+	flex-direction: column;
 	border: 1px solid #ccc;
 	margin: 1px;
 	background: #fff;
