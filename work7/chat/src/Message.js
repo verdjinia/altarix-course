@@ -8,10 +8,10 @@ class Message extends Component {
       <div className={"MessageBox" + (this.props.me ? ' right' : '')}>
 		<div className="User">
 			<img src={user} alt={"user"} />
-			<span className="UserName">{this.props.author}</span>
+			<span className="UserName">{this.props.name}</span>
 		</div>
 		<div className="Message">
-			{this.props.message}
+			{this.props.text}
 		</div>
       </div>
     )
