@@ -28,7 +28,6 @@ class App extends Component {
 		messageRef.on('value', (snapshot) => {
 			const messages = snapshot.val();
 			this.state.messages = Object.values(messages);
-			console.log(this.state.messages);
 			this.setState({
 				messages: this.state.messages
 			})
@@ -37,11 +36,11 @@ class App extends Component {
 
 	render() {
 		return (
-		  <div className="App">
-			<Header />
-			<MessageList messages={this.state.messages} />
-			<MessageForm onMessageSend={this.newMessage} />
-		  </div>
+			<div className="App">
+				<Header />
+				<MessageList messages={this.state.messages} />
+				<MessageForm onMessageSend={this.newMessage} />
+			</div>
 		);
 	}
 }

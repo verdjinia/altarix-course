@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import './MessageForm.css'
 
 class MessageForm extends Component {
-	FormSubmit = (event) => {
+	formSubmit = (event) => {
 		event.preventDefault()
 		this.props.onMessageSend(this.textarea.value)
 		this.textarea.value = ""
 	}
 	render() {
 		return (
-		  <form className="MessageForm" onSubmit={this.FormSubmit}>
+		  <form className="MessageForm" onSubmit={this.formSubmit}>
 			<div className="input-container">
 				<textarea ref={(node) => (this.textarea = node)} placeholder = "Поле для ввода текста сообщения..." />
 			</div>
